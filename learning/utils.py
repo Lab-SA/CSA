@@ -5,7 +5,7 @@
 import copy
 import torch
 from torchvision import datasets, transforms
-from .sampling import mnist_iid, mnist_noniid, mnist_noniid_unequal, mnist_iid_cluster
+from sampling import mnist_iid, mnist_noniid, mnist_noniid_unequal, mnist_iid_cluster
 
 def get_mnist_train():
     data_dir = '../data/mnist/'

@@ -21,21 +21,21 @@ class CSAClient:  # no training weights
     verifyRound = 'verify'
     isBasic = True  # true if BCSA, else FCSA
 
-    n = g = p = R = 0   # number of users and secure parameters
+    n = g = p = R = 0  # number of users and secure parameters
     quantizationLevel = 30
     cluster = clusterN = 0  # cluster index
-    index = 0   # my index
-    ri = 0      # random integer that the FL server assigns to Ci
-    PS = 0      # processing score
-    GPS_i = 0   # GPS information of gird
-    GPS_j = 0   # GPS information of grid
+    index = 0  # my index
+    ri = 0  # random integer that the FL server assigns to Ci
+    PS = 0  # processing score
+    GPS_i = 0  # GPS information of gird
+    GPS_j = 0  # GPS information of grid
 
-    my_sk = my_pk = 0   # my secret key and public key
-    others_keys = {}    # other users' public key dic
-    weight = {}         # model weights
+    my_sk = my_pk = 0  # my secret key and public key
+    others_keys = {}  # other users' public key dic
+    weight = {}  # model weights
     model = {}
 
-    isFirst = True      # setup model at first
+    isFirst = True  # setup model at first
 
     def __init__(self, isBasic):
         # init client socket

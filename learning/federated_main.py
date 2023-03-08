@@ -3,10 +3,10 @@ import numpy as np
 
 import torch
 
-from .options import args_parser
-from .update import LocalUpdate, test_inference
-from .models import CNNMnist
-from .utils import get_mnist_train, get_mnist_test, get_users_data, average_weights, exp_details, average_weight
+from options import args_parser
+from update import LocalUpdate, test_inference
+from models import CNNMnist
+from utils import get_mnist_train, get_mnist_test, get_users_data, average_weights, exp_details, average_weight
 
 # 전역변수 선언
 train_loss, train_accuracy, train_dataset = [], [], []

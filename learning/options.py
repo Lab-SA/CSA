@@ -60,6 +60,11 @@ def args_parser():
                         help='rounds of early stopping')
     parser.add_argument('--verbose', type=int, default=1, help='verbose')
     parser.add_argument('--seed', type=int, default=1, help='random seed')
+
+    # CNN 관련 변수
+    parser.add_argument('--channel1', type=int, default=32, help='channel1')
+    parser.add_argument('--channel2', type=int, default=64, help='channel2')
+
     args = parser.parse_args()
     return args
 

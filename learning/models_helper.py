@@ -12,13 +12,14 @@ default_weights_info = {
     #'fc1.bias': torch.Size([50]),
     #'fc2.weight': torch.Size([10, 50]),
     #'fc2.bias': torch.Size([10])
-    'conv1.weight': torch.Size([32, 1, 5, 5]),
-    'conv1.bias': torch.Size([32]),
-    'conv2.weight': torch.Size([64, 32, 5, 5]),
-    'conv2.bias': torch.Size([64]),
+    'conv1.weight': torch.Size([args.channel1, 1, 5, 5]),
+    'conv1.bias': torch.Size([args.channel1]),
+    'conv2.weight': torch.Size([args.channel2, args.channel1, 5, 5]),
+    'conv2.bias': torch.Size([args.channel2]),
     'fc1.weight': torch.Size([100, 1024]),
     'fc1.bias': torch.Size([100]),
     'fc2.weight': torch.Size([10, 100]),
+    'fc2.bias': torch.Size([10])
 }
 
 def get_model_weights(model):

@@ -62,3 +62,4 @@ def args_parser():
     parser.add_argument('--seed', type=int, default=1, help='random seed')
     args = parser.parse_args()
     return args
+

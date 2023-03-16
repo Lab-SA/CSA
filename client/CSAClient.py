@@ -55,7 +55,7 @@ class CSAClient:  # no training weights
             self.isFirst = False
 
             self.my_sk, self.my_pk = CSA.generateECCKey()  # generate ECC key
-            self.PS = random.randrange(0, 3)  # set PS level
+            self.PS = 1 #random.randrange(0, 3)  # set PS level
             self.GPS_i = random.randrange(1, 6)  # set GPS info
             self.GPS_j = random.randrange(1, 8)
 

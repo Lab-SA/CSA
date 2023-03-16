@@ -30,8 +30,8 @@ class CSAServerV2(CSAServer):  # involves training weights based on CSAServer
             self.model = fl.setup()
             ### optional
             # : Use when you want to define base weights of model
-            prev_weights = mhelper.restore_weights_tensor(mhelper.default_weights_info, readWeightsFromFile())
-            self.model.load_state_dict(prev_weights)
+            #prev_weights = mhelper.restore_weights_tensor(mhelper.default_weights_info, readWeightsFromFile())
+            #self.model.load_state_dict(prev_weights)
 
             model_weights_list = mhelper.weights_to_dic_of_list(self.model.state_dict())
 
@@ -47,7 +47,7 @@ class CSAServerV2(CSAServer):  # involves training weights based on CSAServer
             # set clustering parameters and do clustering
             a = 6
             b = 8
-            k = 3   # means there are k+1 clusters levels
+            k = 1   # means there are k+1 clusters levels
             rf = 2  # the row index of the server cell
             cf = 1  # the column index of the server cell
             t = 4   # constraint
@@ -223,7 +223,7 @@ class CSAServerV2(CSAServer):  # involves training weights based on CSAServer
 if __name__ == "__main__":
     server = ''
     try:
-        server = CSAServerV2(n=100, k=101, isBasic=True, qLevel=300)  # BCSA
+        server = CSAServerV2(n=50, k=11, isBasic=True, qLevel=300)  # BCSA
         # server = CSAServerV2(n=100, k=101, isBasic=False, qLevel=300)  # FCSA
         server.start()
     except (KeyboardInterrupt, RuntimeError, ZeroDivisionError):

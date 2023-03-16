@@ -28,7 +28,8 @@ class CSAClientV2(CSAClient):  # involves training weights based on CSAClient
             self.isFirst = False  # this step only runs once
 
             self.my_sk, self.my_pk = CSA.generateECCKey()  # generate ECC key
-            self.PS = random.randrange(0, 3)  # set PS level
+            #self.PS = random.randrange(0, 3)  # set PS level
+            self.PS = 0
             self.GPS_i = random.randrange(1, 6)  # set GPS info
             self.GPS_j = random.randrange(1, 8)
 

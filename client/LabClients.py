@@ -52,7 +52,7 @@ if __name__ == "__main__":
     """
 
     # args
-    k = 101     # rounds
+    k = 11     # rounds
     n = 25      # number of users
     mode = 6
 

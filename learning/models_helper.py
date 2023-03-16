@@ -1,19 +1,19 @@
 import torch
 from iteration_utilities import deepflatten
 from .federated_main import args
-#from .models import f_ch, s_ch
+from .models import f_ch, s_ch, l_ch
 
-# default_weights_size = 21840
-# default_weights_info = {
-#     'conv1.weight': torch.Size([32, 1, 5, 5]),
-#     'conv1.bias': torch.Size([32]),
-#     'conv2.weight': torch.Size([64, 32, 5, 5]),
-#     'conv2.bias': torch.Size([64]),
-#     'fc1.weight': torch.Size([100, 1024]), #fully connected(전결합층)
-#     'fc1.bias': torch.Size([100]),
-#     'fc2.weight': torch.Size([10, 100]),
-#     'fc2.bias': torch.Size([10])
-# }
+default_weights_size = 21840
+default_weights_info = {
+    'conv1.weight': torch.Size([f_ch, 1, 5, 5]),
+    'conv1.bias': torch.Size([f_ch]),
+    'conv2.weight': torch.Size([s_ch, f_ch, 5, 5]),
+    'conv2.bias': torch.Size([s_ch]),
+    'fc1.weight': torch.Size([100, l_ch]),
+    'fc1.bias': torch.Size([100]),
+    'fc2.weight': torch.Size([10, 100]),
+    'fc2.bias': torch.Size([10])
+}
 
 def get_model_weights(model):
     return model.state_dict()

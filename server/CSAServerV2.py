@@ -30,8 +30,8 @@ class CSAServerV2(CSAServer):  # involves training weights based on CSAServer
             self.model = fl.setup()
             ### optional
             # : Use when you want to define base weights of model
-            #prev_weights = mhelper.restore_weights_tensor(mhelper.default_weights_info, readWeightsFromFile())
-            #self.model.load_state_dict(prev_weights)
+            prev_weights = mhelper.restore_weights_tensor(mhelper.default_weights_info, readWeightsFromFile())
+            self.model.load_state_dict(prev_weights)
 
             model_weights_list = mhelper.weights_to_dic_of_list(self.model.state_dict())
 

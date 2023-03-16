@@ -52,8 +52,8 @@ if __name__ == "__main__":
     """
 
     # args
-    k = 101     # rounds
-    n = 25      # number of users
+    k = 11     # rounds
+    n = 10      # number of users
     mode = 6
 
     # thread
